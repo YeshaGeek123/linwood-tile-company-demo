@@ -224,34 +224,7 @@ return $value;
 }
 add_filter( 'site_transient_update_plugins', 'rocket_lazy_load_disable' );
 
-function banowetz_custom_testimonials_post() {
-	$labels = array(
-		'name' => _x( 'Testimonials', 'post type general name' ),
-		'singular_name' => _x( 'Testimonial', 'post type singular name' ),
-		'add_new' => _x( 'Add New', 'testimonial' ),
-		'add_new_item' => __( 'Add New Testimonials' ),
-		'edit_item' => __( 'Edit Testimonial' ),
-		'new_item' => __( 'New Testimonial' ),
-		'all_items' => __( 'All Testimonials' ),
-		'view_item' => __( 'View Testimonial' ),
-		'search_items' => __( 'Search Testimonials' ),
-		'not_found' => __( 'No testimonial found' ),
-		'not_found_in_trash' => __( 'No testimonial found in the Trash' ),
-		'parent_item_colon' => '',
-		'menu_name' => 'Testimonials'
-	);
-	$args = array(
-		'labels' => $labels,
-		'description' => 'Holds testimonials and testimonial specific data',
-		'public' => true,
-		'menu_position' => 5,
-		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-		'has_archive' => true,
-		'menu_icon' => 'dashicons-editor-quote',
-	);
-	register_post_type( 'testimonials', $args );
-}
-add_action( 'init', 'banowetz_custom_testimonials_post' );
+
 
 add_action('wp_loaded', 'output_buffer_start');
 
@@ -282,3 +255,18 @@ function change_html_custom_logo() {
         );
     return $html;   
 }
+
+// it's working only menu custom link and link have started with #
+function change_menu_URL($items){
+	global $wp;
+	$current_slug = $wp->request;
+		if(!is_front_page()){
+			foreach ($items as $key => $item) {
+				if ($item->object == 'custom' && substr($item->url, 0, 1) == '#') {
+					$item->url = site_url() . $item->url;
+				}
+			}
+		}
+		return $items;
+	}
+	add_filter('wp_nav_menu_objects', 'change_menu_URL'); 

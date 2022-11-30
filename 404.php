@@ -15,7 +15,7 @@ $page_id = get_option('page_on_front');
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="h1-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'banowetz' ); ?></h1>
+                        <h1 class="h1-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'linwood-tile-company' ); ?></h1>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,11 @@ $page_id = get_option('page_on_front');
 
 			<section class="error-404 not-found">
 				<div class="container">
-					<img src="<?php echo home_url(); ?>/wp-content/themes/banowetz/assets/images/404.svg">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img width="427" height="397" src="<?php echo home_url(); ?>/wp-content/themes/linwood-tile-company/assets/images/404.svg">
+                        </div>
+                    </div>
 				</div>
 			</section><!-- .error-404 -->
 

@@ -19,7 +19,8 @@
 		</div>
 	</div>
 </section>
-<section class="about-us">
+<!-- About us -->
+<section class="about-us" id="aboutus">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
@@ -52,7 +53,7 @@
 	</div>
 </section>
 <!-- Services -->
-<section class="services">
+<section class="services" id="service">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5">
