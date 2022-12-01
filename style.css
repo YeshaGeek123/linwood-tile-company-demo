@@ -1875,6 +1875,13 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 170px 0 193px;
 }
 
+.single-post .main-banner.inner-banner,
+.page-id-2 .main-banner.inner-banner,
+.error404 .main-banner.inner-banner,
+.page-template-template-nosidebar .main-banner.inner-banner {
+    padding: 170px 0 30px;
+}
+
 .blog-post,
 .inner-page-text {
     padding: 80px 0;
@@ -2315,7 +2322,7 @@ a.call-mobile {
 
 .skew-img {
     height: 511px;
-    width: 1074.07px;
+    width: 1084.07px;
     transform: skewX(30deg);
     position: relative;
     right: -11px;
@@ -2370,7 +2377,7 @@ a.call-mobile {
     left: calc(100% - 830px);
     transform: skewX(30deg);
     float: right;
-    left: 220px;
+    left: 212px;
 }
 
 .service-wp .service-row:last-child {
@@ -2384,7 +2391,7 @@ a.call-mobile {
 .service-row.even .service-skew {
     float: left;
     left: auto;
-    right: 220px;
+    right: 212px;
 }
 
 .service-skew .bg-img {
@@ -2798,7 +2805,7 @@ span.footer-link-icon {
 }
 
 .main-service-content {
-    padding: 0 50px 0 0;
+    padding: 0 67px 0 0;
     box-shadow: unset;
     background: transparent;
 }
@@ -2849,7 +2856,7 @@ span.footer-link-icon {
 }
 
 .main-service-img {
-    width: 1074px;
+    width: 1087px;
     height: 702px;
     left: 65px;
     float: left;
@@ -2861,7 +2868,7 @@ span.footer-link-icon {
 }
 
 .main-service-sec .service-row.even .service-skew {
-    right: 220px;
+    right: 210px;
 }
 
 .main-service-sec .service-row.even .service-skew .bg-img {
@@ -2874,6 +2881,7 @@ span.footer-link-icon {
 
 .main-service-sec .service-content {
     padding: 58px 30px 23px 70px;
+    margin: 60px 0 0;
 }
 
 .main-service-sec {
@@ -3659,6 +3667,25 @@ button.close:hover {
     }
 }
 
+@media(min-width: 1921px) {
+    .container {
+        max-width: 1500px;
+    }
+    .skew-img {
+        width: 1500px;
+    }
+    .service-skew {
+        width: 1530px;
+    }
+    .footer-skew {
+        width: 1355px;
+    }
+    .footer-middel-bg {
+        width: 1085px;
+        right: 247px;
+    }
+}
+
 @media screen and (max-width: 1499px) {
     .main-navigation li {
         position: relative;
@@ -3753,6 +3780,18 @@ button.close:hover {
     }
     .gallery-slider .slick-list {
         margin: 0 30px;
+    }
+    .main-service-content {
+        padding: 0;
+    }
+    .main-service-sec .service-content {
+        padding: 40px 30px 23px 30px;
+    }
+    .main-service-content .h2-title {
+        padding: 0 50px 0 0;
+    }
+    .contact-content {
+        padding: 0;
     }
 }
 
@@ -3874,8 +3913,28 @@ button.close:hover {
         opacity: 0;
     }
     .main-navigation a {
-        padding: 10px 0px;
+        padding: 0;
         display: inline-block;
+        color: var(--dark-color);
+        border-bottom: 2px solid transparent;
+    }
+    .main-navigation ul ul li {
+        margin: 0 0 1vh;
+        padding: 0;
+    }
+    .main-navigation ul ul li a {
+        font-size: 16px;
+    }
+    .page-template-template-contact-php .main-navigation li.menu-item-259>a,
+    .page-template-template-services-php .main-navigation li.menu-item-250>a,
+    .home .main-navigation li.menu-item-248>a,
+    .main-navigation li:hover>a {
+        border-color: var(--dark-color);
+    }
+    .main-navigation li a:after {
+        display: none;
+    }
+    .main-navigation .sub-menu li a:hover {
         color: var(--dark-color);
     }
     .site-header {
@@ -3972,9 +4031,6 @@ button.close:hover {
     .h2-title.vertical-text {
         display: none;
     }
-    .skew-img {
-        display: none;
-    }
     .mobile-about-slider {
         height: 320px;
         display: block;
@@ -4041,6 +4097,7 @@ button.close:hover {
     .footer-form {
         margin-top: -100px;
         padding: 30px;
+        text-align: center;
     }
     .footer-middel-bg {
         transform: skewX(0deg);
@@ -4217,28 +4274,28 @@ button.close:hover {
     .main-seo-content .sec-head {
         line-height: initial;
     }
-    .site-header.sticky_head .main-navigation .sub-menu li {
-        margin-bottom: 14px
-    }
     .site-header.sticky_head .main-navigation .sub-menu li:last-child {
         margin-bottom: 0
     }
     .main-navigation ul li:hover>ul,
     .main-navigation ul li.focus>ul {
         left: 0;
-        display: block
+        display: block;
+        animation: unset;
+    }
+    .main-navigation ul li.menu-item-has-children:hover ul {
+        animation: unset;
     }
     .main-navigation ul ul {
         margin: 0;
         display: block;
-        position: unset;
+        position: relative;
         background: 0 0;
         box-shadow: none;
         padding: 0;
-        padding-left: 20px;
         float: none;
-        margin-top: 1vh;
         width: auto;
+        animation: unset;
     }
     .main-navigation ul>li.menu-item-has-children a:after {
         display: none
@@ -4303,7 +4360,7 @@ button.close:hover {
     }
     .service-content {
         padding: 30px;
-        margin-top: -50px;
+        margin: 0;
     }
     .h3-title {
         margin-bottom: 16px;
@@ -4315,7 +4372,7 @@ button.close:hover {
         margin-bottom: 32px;
     }
     .service-row {
-        margin-bottom: 30px;
+        margin-bottom: 70px;
     }
     .gallery-slider .slick-list {
         margin: 0;
@@ -4336,10 +4393,104 @@ button.close:hover {
         text-align: center;
     }
     .wpcf7 .wpcf7-spinner {
-        left: 70%;
+        left: 50%;
+        transform: translate(390%, -50%);
     }
     .footer-top .h2-title {
         margin-bottom: 22px;
+    }
+    .main-service-content::before {
+        display: none;
+    }
+    .main-banner.inner-banner {
+        padding: 150px 0 108px 0px;
+    }
+    .service-skew {
+        left: -280px;
+        margin: -10px 0 50px;
+    }
+    .services-page-sec {
+        padding: 0 0 40px;
+    }
+    .main-service-sec .service-content {
+        margin: 0;
+        padding: 40px 30px 15px 30px;
+    }
+    .main-service-sec .service-row.even .service-skew {
+        right: -120px;
+    }
+    .main-service-sec {
+        padding: 0;
+    }
+    .main-service-sec .service-row {
+        padding: 60px 0;
+    }
+    .service-content p {
+        height: auto;
+        overflow: visible;
+        text-overflow: unset;
+        -webkit-line-clamp: unset;
+        margin-bottom: 14px;
+    }
+    .services-page-sec .service-skew.main-service-img {
+        left: 120px;
+    }
+    .main-service-content .h2-title {
+        padding: 0;
+    }
+    .footer-content-wp .footer-link-box {
+        display: block;
+    }
+    .contact-content .header-icon.footer-social {
+        display: block;
+        margin: 30px 0 30px;
+    }
+    .content-text {
+        margin-bottom: 18px;
+    }
+    .main-banner.inner-banner.contact-banner {
+        padding: 170px 0 60px;
+    }
+    .contact-form,
+    .contact-content {
+        text-align: center;
+    }
+    .main-banner.inner-banner.contact-banner::before {
+        left: -500px;
+    }
+    .contact-form .footer-form {
+        padding: 30px;
+    }
+    .contact-form .footer-form .h3-title {
+        margin-bottom: 27px;
+    }
+    .blog-post,
+    .inner-page-text {
+        padding: 60px 0;
+    }
+    .error-404 img {
+        width: 100%;
+    }
+    .single-post .main-banner.inner-banner,
+    .page-id-2 .main-banner.inner-banner,
+    .error404 .main-banner.inner-banner,
+    .page-template-template-nosidebar .main-banner.inner-banner {
+        padding: 140px 0 30px;
+    }
+    .skew-img {
+        margin: -50px 0 180px;
+        width: 150%;
+        height: 400px;
+        left: 105px;
+    }
+    .about-img {
+        height: 400px;
+    }
+    .about-content:before {
+        display: none;
+    }
+    .slick-arrow {
+        bottom: -100px;
     }
 }
 
@@ -4397,6 +4548,9 @@ button.close:hover {
     }
     .service-row.even .service-skew {
         right: -140px;
+    }
+    .service-skew {
+        width: 130%;
     }
 }
 
@@ -4467,6 +4621,17 @@ button.close:hover {
     .gallery-img {
         height: 300px;
     }
+    .main-banner.inner-banner.contact-banner::before {
+        display: none;
+    }
+    .main-banner.inner-banner.contact-banner::after {
+        left: auto;
+        right: 0;
+    }
+    .skew-img,
+    .about-img {
+        height: 300px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -4495,8 +4660,18 @@ button.close:hover {
 }
 
 @media screen and (max-width: 400px) {
+    a.call-mobile,
+    .menu-toggle {
+        width: 75px;
+    }
+    a.call-mobile {
+        right: 90px;
+    }
     .container {
         padding: 0px 15px;
+    }
+    .main-navigation.toggled .menu-header-menu-container {
+        padding: 100px 20px 30px 20px;
     }
     .main-banner.seo-banner .h1-title,
     .h1-title {
@@ -4515,8 +4690,7 @@ button.close:hover {
         right: 20px;
     }
     .service-skew .bg-img {
-        width: 120%;
-        left: 0;
+        width: 149%;
     }
     .service-row.even .service-skew .bg-img {
         right: auto;
@@ -4570,6 +4744,15 @@ button.close:hover {
     }
     .service-content {
         padding: 30px 15px;
+    }
+    .main-service-sec .service-content {
+        padding: 30px 15px 15px 15px;
+    }
+    .contact-form .footer-form {
+        padding: 30px 15px;
+    }
+    .slick-arrow {
+        transform: translateX(-170%);
     }
 }
 

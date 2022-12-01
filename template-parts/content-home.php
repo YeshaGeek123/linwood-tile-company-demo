@@ -3,8 +3,8 @@
 		<div class="row">
 			<div class="col-lg-10 m-auto text-center">
 				<div>
-					<h1 class="h1-title"><?php the_field('main_banner_title'); ?></h1>
-					<div class="banner-btn">
+					<h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s"><?php the_field('main_banner_title'); ?></h1>
+					<div class="banner-btn wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
 						<?php
 						$phone_number = get_field('phone_number', 'option');
 						$val = array("(", ")", " ", "-");
@@ -23,7 +23,7 @@
 <section class="about-us" id="aboutus">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-6 order-2 order-lg-1 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
 				<div class="about-content">
 					<h2 class="h2-title vertical-text"><?php the_field('about_us_title'); ?></h2>
 					<h2 class="h2-title" id="about"><?php the_field('about_us_title'); ?></h2>
@@ -33,14 +33,14 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6">
-				<div class="skew-img ">
+			<div class="col-lg-6 order-1 order-lg-2 wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
+				<div class="skew-img">
 					<div class="about-slider-img about-gal-slider about-slider">
 						<?php
 						$images = get_field('about_us_gallery');
 						if ($images) :
 							foreach ($images as $image) : ?>
-								<a data-fancybox="gallery" href="<?php echo esc_url($image['url']); ?>" title="about us gallery">
+								<a data-fancybox="gallery" href="<?php echo esc_url($image['url']); ?>" title="About Image">
 									<div class="about-img bg-img" style="background-image: url(<?php echo esc_url($image['url']); ?>);"></div>
 								</a>
 						<?php endforeach;
@@ -58,8 +58,8 @@
 		<div class="row">
 			<div class="col-lg-5">
 				<div class="service-title">
-					<p class="sub-content" id="flooring-services">Our Services</p>
-					<h2 class="h2-title"><?php the_field('home_service_main_title'); ?></h2>
+					<p class="sub-content wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s" id="flooring-services">Our Services</p>
+					<h2 class="h2-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s"><?php the_field('home_service_main_title'); ?></h2>
 				</div>
 			</div>
 		</div>
@@ -71,12 +71,12 @@
 				if (get_row_index() % 2 != 0) :
 		?>
 					<div class="row align-items-center service-row odd">
-						<div class="col-lg-5">
+						<div class="col-lg-5 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
 							<div class="service-skew">
 								<div class="bg-img" style="background-image: url(<?php the_sub_field('home_list_service_image'); ?>)"></div>
 							</div>
 						</div>
-						<div class="col-lg-7">
+						<div class="col-lg-7 wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
 							<div class="service-content">
 								<h3 class="h3-title"><?php the_sub_field('home_list_service_title'); ?></h3>
 								<?php the_sub_field('home_list_service_content'); ?>
@@ -90,7 +90,7 @@
 					<?php else: ?>
 					<div class="row align-items-center service-row even">
 						<div class="col-lg-7 order-2 order-lg-1">
-							<div class="service-content">
+							<div class="service-content wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
 								<h3 class="h3-title"><?php the_sub_field('home_list_service_title'); ?></h3>
 								<?php the_sub_field('home_list_service_content'); ?>
 								<a href="<?php the_sub_field('home_service_list_page_link') ?>" class="learn-more" title="<?php the_sub_field('home_list_service_title'); ?>, Learn More">
@@ -100,7 +100,7 @@
 							</div>
 						</div>
 						<div class="col-lg-5 order-1 order-lg-2">
-							<div class="service-skew">
+							<div class="service-skew wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
 								<div class="bg-img" style="background-image: url(<?php the_sub_field('home_list_service_image'); ?>)"></div>
 							</div>
 						</div>
@@ -120,7 +120,7 @@
 <div class="gallery" id="gallery">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 gallery-slider">
+			<div class="col-lg-12 gallery-slider wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
 			<?php 
 			$images = get_field('home_gallery_images');
 			if ($images) :
@@ -145,14 +145,14 @@
 <section class="hiring-sec bg-img" style="background-image: url('<?php the_field('home_careers_background_image'); ?>');">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5">
+			<div class="col-lg-5 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
 				<div class="hiring-content white-text">
 					<span class="icon"><img width="29" height="29" src="<?php the_field('home_careers_icon'); ?>" alt="Human Resource"></span>
 					<h2 class="h2-title"><?php the_field('home_careers_title'); ?></h2>
 					<?php the_field('home_careers_content'); ?>
 				</div>
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-7 wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
 				<div class="hiring-form">
 					<?php echo do_shortcode('[contact-form-7 id="275" title="Careers Form"]'); ?>
 				</div>

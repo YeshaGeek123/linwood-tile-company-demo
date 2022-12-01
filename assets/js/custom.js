@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
     new WOW().init();
     var currentRequest = null;
 
+    //About Slider
     jQuery('.about-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -18,7 +19,7 @@ jQuery(document).ready(function($) {
         responsive: [{
                 breakpoint: 992,
                 settings: {
-                    dots: true,
+                    dots: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -26,7 +27,7 @@ jQuery(document).ready(function($) {
             {
                 breakpoint: 768,
                 settings: {
-                    dots: true,
+                    dots: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -34,6 +35,7 @@ jQuery(document).ready(function($) {
         ]
     });
 
+    //Gallery Slider    
     jQuery('.gallery-slider').slick({
         infinite: true,
         slidesToShow: 3,
@@ -113,29 +115,6 @@ jQuery(document).ready(function($) {
 jQuery(window).on('load resize', function() {
     var window_size = jQuery(window).width();
     if (window_size <= 991) {
-        jQuery("#menu-item-250 a").first().attr('href', 'javascript:void(0);');
-        jQuery('body').on('click', '#primary-menu .menu-item-has-children', function() {
-            if ((jQuery(this).hasClass('active-sub-menu'))) {
-                jQuery(this).removeClass('active-sub-menu');
-                jQuery(this).find('.sub-menu').css('display', 'none');
-            } else {
-                jQuery(".menu-item-has-children").removeClass('active-sub-menu');
-                jQuery(".sub-menu").css('display', 'none');
-                jQuery(this).addClass('active-sub-menu');
-                jQuery(this).find('.sub-menu').css('display', 'block');
-            }
-        });
-
-        // jQuery('#primary-menu .menu-item a , .menu-item-has-children ul').not('.menu-item-has-children a').click(function() {
-        //     jQuery('#site-navigation').removeClass('toggled');
-        // });
-
-        // jQuery('.menu-toggle').click(function() {
-        //     jQuery(".sub-menu").css('display', 'none');
-        // });
-
-       
-
         /* Scroll To Top JS */
         jQuery(window).scroll(function() {
             if (jQuery(this).scrollTop() > 100) {

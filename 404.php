@@ -10,12 +10,12 @@
 get_header();
 $page_id = get_option('page_on_front');
 ?>
-<section class="main-banner inner-banner" style="background-image: url(<?php the_field('main_banner_bg_img',$page_id); ?>);">
+<section class="main-banner inner-banner bg-img" style="background-image: url(<?php the_field('main_banner_bg_img',$page_id); ?>);">
         <div class="sec-wp">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="h1-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'linwood-tile-company' ); ?></h1>
+                        <h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'linwood-tile-company' ); ?></h1>
                     </div>
                 </div>
             </div>
