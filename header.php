@@ -64,16 +64,6 @@
 							);
 							?>
 							<div class="header-icon">
-								<!-- <div>
-									<a href="tel:5638724723" title="563-872-4723" class="mobile-number">
-										<span class="footer-link-icon">
-											<img src="<?php //bloginfo('template_url'); ?>/assets/images/phone.png" alt="Phone">
-										</span>
-										<div class="footer-link-content">
-											<span class="bold">563-872-4723</span>
-										</div>
-									</a>
-								</div> -->
 								<div class="hd-social">
 									<a href="<?php the_field('facebook_link', 'option'); ?>" title="Facebook" target="_blank">
 										<svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 8 16">
